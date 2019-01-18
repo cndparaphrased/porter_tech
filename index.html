@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Porter Airlines</title>
+</head>
+
+<body>
+  <!-- HEADER STARTS -->
+  <header>
+    <nav>
+      <ul class="nav__main row list-unstyled">
+        <li class="nav__item col-md text-center px-2 py-2 mr-1">
+          <a class="nav-link text-white px-0" href="#0">Flights</a>
+        </li>
+        <li class="nav__item col-md text-center px-2 py-2 mr-1 active order-last order-md-0">
+          <a class="nav-link text-white px-0" href="#0">Flights + Hotels <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav__item col-md text-center px-2 py-2 mr-1">
+          <a class="nav-link text-white px-0" href="#0">Porter Pass</a>
+        </li>
+        <li class="nav__item col-md text-center px-2 py-2 mr-1">
+          <a class="nav-link text-white px-0" href="#0">Check-in</a>
+        </li>
+        <li class="nav__item col-md text-center px-2 py-2 mr-1">
+          <a class="nav-link text-white px-0" href="#0">Flight Status</a>
+        </li>
+        <li class="nav__item col-md text-center px-2 py-2">
+          <a class="nav-link text-white px-0" href="#0">My Bookings</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- HEADER ENDS -->
+
+  <!-- MAIN STARTS -->
+  <main>
+    <form class="form__flightHotel">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="destFrom">From</label>
+          <select class="custom-select" name="destFrom" id="destFrom" required="required">
+            <option value=""></option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="destTo">To</label>
+          <select class="custom-select" name="destTo" id="destTo" required="required"></select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="destDates">Dates</label>
+          <input type="text" class="form-control destDates" id="destDates" placeholder="Departing - Return" required="required">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="passengersAdults">Passengers <span class="sr-only">(adults)</span></label>
+          <select class="custom-select" name="passengersAdults" id="passengersAdults" required="required">
+            <option value="1Adult">1 adult (18+)</option>
+            <option selected value="2Adults">2 adults (18+)</option>
+            <option value="3Adults">3 adults (18+)</option>
+            <option value="4Adults">4 adults (18+)</option>
+            <option value="5Adults">5 adults (18+)</option>
+            <option value="6Adults">6 adults (18+)</option>
+            <option value="7Adults">7 adults (18+)</option>
+            <option value="8Adults">8 adults (18+)</option>
+            <option value="9Adults">9 adults (18+)</option>
+          </select>
+          <label for="passengersChildren"><span class="sr-only">Passengers (children)</span></label>
+          <select class="custom-select" name="passengersChildren" id="passengersChildren" required="required">
+            <option selected value="0Children">0 children (0-17)</option>
+            <option value="1">1 child (0-17)</option>
+            <option value="2">2 children (0-17)</option>
+            <option value="3">3 children (0-17)</option>
+            <option value="4">4 children (0-17)</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="rooms">Rooms</label>
+          <select class="custom-select" name="rooms" id="rooms" required="required">
+            <option selected value="1Room">1 room</option>
+            <option value="2Rooms">2 rooms</option>
+            <option value="3Rooms">3 rooms</option>
+            <option value="4Rooms">4 rooms</option>
+          </select>
+        </div>
+      </div>
+
+      <ul class="form-row container__childAge">
+        <label class="col-12" for="child1">Please select age of children</label>
+        <li class="form-group col-4 col-md-2 childAge">
+          <select class="custom-select select__childAge p-1" name="child1" id="child1" required="required">
+            <option value="">child one</option>
+            <option value="childAgeInfant">1 yr infant on lap</option>
+            <option value="childAge2">2 years old</option>
+            <option value="childAge3">3 years old</option>
+            <option value="childAge4">4 years old</option>
+            <option value="childAge5">5 years old</option>
+            <option value="childAge6">6 years old</option>
+            <option value="childAge7">7 years old</option>
+            <option value="childAge8">8 years old</option>
+            <option value="childAge9">9 years old</option>
+            <option value="childAge10">10 years old</option>
+            <option value="childAge11">11 years old</option>
+            <option value="childAge12">12 years old</option>
+            <option value="childAge13">13 years old</option>
+            <option value="childAge14">14 years old</option>
+            <option value="childAge15">15 years old</option>
+            <option value="childAge17">16 years old</option>
+            <option value="childAge18">17 years old</option>
+          </select>
+        </li>
+
+        <li class="form-group col-4 col-md-2 childAge">
+          <select class="custom-select select__childAge p-1" name="child2" id="child2" required="required">
+            <option value="">child two</option>
+            <option value="childAgeInfant">1 yr infant on lap</option>
+            <option value="childAge2">2 years old</option>
+            <option value="childAge3">3 years old</option>
+            <option value="childAge4">4 years old</option>
+            <option value="childAge5">5 years old</option>
+            <option value="childAge6">6 years old</option>
+            <option value="childAge7">7 years old</option>
+            <option value="childAge8">8 years old</option>
+            <option value="childAge9">9 years old</option>
+            <option value="childAge10">10 years old</option>
+            <option value="childAge11">11 years old</option>
+            <option value="childAge12">12 years old</option>
+            <option value="childAge13">13 years old</option>
+            <option value="childAge14">14 years old</option>
+            <option value="childAge15">15 years old</option>
+            <option value="childAge17">16 years old</option>
+            <option value="childAge18">17 years old</option>
+          </select>
+        </li>
+
+        <li class="form-group col-4 col-md-2 childAge">
+          <select class="custom-select select__childAge p-1" name="child3" id="child3" required="required">
+            <option value="">child three</option>
+            <option value="childAgeInfant">1 yr infant on lap</option>
+            <option value="childAge2">2 years old</option>
+            <option value="childAge3">3 years old</option>
+            <option value="childAge4">4 years old</option>
+            <option value="childAge5">5 years old</option>
+            <option value="childAge6">6 years old</option>
+            <option value="childAge7">7 years old</option>
+            <option value="childAge8">8 years old</option>
+            <option value="childAge9">9 years old</option>
+            <option value="childAge10">10 years old</option>
+            <option value="childAge11">11 years old</option>
+            <option value="childAge12">12 years old</option>
+            <option value="childAge13">13 years old</option>
+            <option value="childAge14">14 years old</option>
+            <option value="childAge15">15 years old</option>
+            <option value="childAge17">16 years old</option>
+            <option value="childAge18">17 years old</option>
+          </select>
+        </li>
+
+        <li class="form-group col-4 col-md-2 childAge">
+          <select class="custom-select select__childAge p-1" name="child4" id="child4" required="required">
+            <option value="">child four</option>
+            <option value="childAgeInfant">1 yr infant on lap</option>
+            <option value="childAge2">2 years old</option>
+            <option value="childAge3">3 years old</option>
+            <option value="childAge4">4 years old</option>
+            <option value="childAge5">5 years old</option>
+            <option value="childAge6">6 years old</option>
+            <option value="childAge7">7 years old</option>
+            <option value="childAge8">8 years old</option>
+            <option value="childAge9">9 years old</option>
+            <option value="childAge10">10 years old</option>
+            <option value="childAge11">11 years old</option>
+            <option value="childAge12">12 years old</option>
+            <option value="childAge13">13 years old</option>
+            <option value="childAge14">14 years old</option>
+            <option value="childAge15">15 years old</option>
+            <option value="childAge17">16 years old</option>
+            <option value="childAge18">17 years old</option>
+          </select>
+        </li>
+      </ul>
+
+      <div class="form-group text-center btn__container">
+        <button class="btn btn__desktop" type="submit">Search</button>
+      </div>
+    </form>
+  </main>
+  <!-- MAIN ENDS -->
+
+  <!-- FOOTER STARTS -->
+  <footer>
+
+  </footer>
+  <!-- FOOTER ENDS -->
+
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
